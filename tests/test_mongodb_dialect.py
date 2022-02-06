@@ -1,5 +1,7 @@
 from mongodb_dialect import __version__
 
+from mongodb_dialect import MongoDBDialect
+
 import sqlalchemy
 
 import sqlalchemy
@@ -34,5 +36,17 @@ def test_main():
     session.commit()
 
 
+from sqlalchemy.dialects import registry
+registry.register("mongodb", "mongodb_dialect", "MongoDBDialect")
+
+def test_dialect():
+    engine = sqlalchemy.create_engine("mongodb://localhost:27001/mydb")
+    Base.metadata.create_all(bind=engine)
+
 if __name__ == '__main__':
-    test_main()
+    # test_main()
+    try:
+        test_dialect()
+
+    except Exception as e:
+        print(e)
