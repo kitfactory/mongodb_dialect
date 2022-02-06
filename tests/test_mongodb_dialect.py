@@ -36,12 +36,29 @@ def test_main():
     session.commit()
 
 
+
 from sqlalchemy.dialects import registry
 registry.register("mongodb", "mongodb_dialect", "MongoDBDialect")
 
+
+import traceback
+
 def test_dialect():
-    engine = sqlalchemy.create_engine("mongodb://localhost:27001/mydb")
-    Base.metadata.create_all(bind=engine)
+    try:
+        engine = sqlalchemy.create_engine("mongodb://localhost:27001/mydb")
+        Base.metadata.create_all(bind=engine)
+        session = sessionmaker(bind=engine)()
+
+        apple = Fruit()
+        apple.id = 3
+        apple.name = 'apple'
+        session.add(instance=apple)
+        session.commit()
+    except Exception as e:
+        traceback.print_exc()
+        print(e)
+
+
 
 if __name__ == '__main__':
     # test_main()

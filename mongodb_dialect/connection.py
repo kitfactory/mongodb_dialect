@@ -13,6 +13,7 @@ class MongoDBDialectConnection(object):
     FILE_DIR = '/vagrant'
 
     def __init__(self, username=None, password=None, host=None, database=None, **kwargs):
+        print("MonogoDBDialectConnection#__init__")
         self.host = host
         self.database = database
         self.username = username

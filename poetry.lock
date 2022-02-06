@@ -81,13 +81,12 @@ category = "main"
 description = ""
 name = "mongodb-connector"
 optional = false
-python-versions = ">=3.7,<4.0"
-version = "0.1.0"
+python-versions = ">=3.7"
+version = "0.2.0"
 
 [package.dependencies]
-lark-parser = ">=0.12.0,<0.13.0"
-pymongo = ">=4.0.1,<5.0.0"
-sqlparse = ">=0.4.2,<0.5.0"
+lark-parser = ">=0.12.0"
+pymongo = ">=4.0.1"
 
 [[package]]
 category = "dev"
@@ -226,14 +225,6 @@ sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
 category = "main"
-description = "A non-validating SQL parser."
-name = "sqlparse"
-optional = false
-python-versions = ">=3.5"
-version = "0.4.2"
-
-[[package]]
-category = "main"
 description = "Backported and Experimental Type Hints for Python 3.6+"
 marker = "python_version < \"3.8\""
 name = "typing-extensions"
@@ -263,7 +254,7 @@ docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "713310e72e3575ef178cd33d31277cd8f4340d94947380c8c8a0699dc7e376e8"
+content-hash = "be3886ae6c98d296f53f3cceb33cb37101442b80c404e8bcda8a50c1dfd7311c"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -345,8 +336,8 @@ lark-parser = [
     {file = "lark_parser-0.12.0-py2.py3-none-any.whl", hash = "sha256:0eaf30cb5ba787fe404d73a7d6e61df97b21d5a63ac26c5008c78a494373c675"},
 ]
 mongodb-connector = [
-    {file = "mongodb_connector-0.1.0-py3-none-any.whl", hash = "sha256:34dbba5e993270ab0863acccdfb6c16391210c4f184a43c90f23dae3a8ce570f"},
-    {file = "mongodb_connector-0.1.0.tar.gz", hash = "sha256:cf6b30dd2e718ea0a759ebbbcff05796625b25c94eb2cbe6e844cd61db6323b7"},
+    {file = "mongodb_connector-0.2.0-py3-none-any.whl", hash = "sha256:b05203add6d78f86c1b75f35a2fc3eac3995575a7dbb4a7812cb115460f1591a"},
+    {file = "mongodb_connector-0.2.0.tar.gz", hash = "sha256:ee62c91901eb0d70445ba1e1d8fbd0cc9f40b75eb1d966b02c6d27b3b15f8a35"},
 ]
 more-itertools = [
     {file = "more-itertools-8.12.0.tar.gz", hash = "sha256:7dc6ad46f05f545f900dd59e8dfb4e84a4827b97b3cfecb175ea0c7d247f6064"},
@@ -494,10 +485,6 @@ sqlalchemy = [
     {file = "SQLAlchemy-1.4.31-cp39-cp39-win32.whl", hash = "sha256:289465162b1fa1e7a982f8abe59d26a8331211cad4942e8031d2b7db1f75e649"},
     {file = "SQLAlchemy-1.4.31-cp39-cp39-win_amd64.whl", hash = "sha256:9e4fb2895b83993831ba2401b6404de953fdbfa9d7d4fa6a4756294a83bbc94f"},
     {file = "SQLAlchemy-1.4.31.tar.gz", hash = "sha256:582b59d1e5780a447aada22b461e50b404a9dc05768da1d87368ad8190468418"},
-]
-sqlparse = [
-    {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
-    {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.0.1-py3-none-any.whl", hash = "sha256:7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b"},
